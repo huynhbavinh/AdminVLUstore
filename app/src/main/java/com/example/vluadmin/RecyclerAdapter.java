@@ -9,9 +9,10 @@ import android.view.ViewGroup;
 
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.solver.widgets.ConstraintAnchor;
+
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,7 +24,8 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
+public class
+RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
     RecyclerView recyclerView;
     private static final String TAG ="loi";
@@ -48,27 +50,41 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        holder.ten.setText(productsList.get(position).getPname());
 
-        holder.gia.setText(productsList.get(position).getPrice() + "$");
-        holder.mota.setText(productsList.get(position).getDescription());
-        //image
-        Glide.with(mcontext)
-                .load(productsList.get(position).getImage())
-                .into(holder.imgview);
 
-        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mcontext,AdminDetailProduct.class);
-                intent.putExtra("pname",productsList.get(position).getPname());
-                intent.putExtra("price",productsList.get(position).getPrice());
-                intent.putExtra("des",productsList.get(position).getDescription());
-                intent.putExtra("img",productsList.get(position).getImage());
-                ///saaaaaaaaaaa
-                
-            }
-        });
+            holder.ten.setText(productsList.get(position).getPname());
+
+            holder.gia.setText(productsList.get(position).getPrice() + " $");
+            holder.mota.setText(productsList.get(position).getDescription());
+            //image
+            Glide.with(mcontext)
+                    .load(productsList.get(position).getImage())
+                    .into(holder.imgview);
+
+        try {
+            holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mcontext, AdminDetailProduct.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                    intent.putExtra("day_create",productsList.get(position).getDate());
+                    intent.putExtra("time_create",productsList.get(position).getTime());
+                    intent.putExtra("pname", productsList.get(position).getPname());
+                    intent.putExtra("price", productsList.get(position).getPrice());
+                    intent.putExtra("des", productsList.get(position).getDescription());
+                    intent.putExtra("img", productsList.get(position).getImage());
+
+
+
+                    mcontext.startActivity(intent);
+
+                }
+            });
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 
@@ -104,7 +120,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             gia = (TextView)itemView.findViewById(R.id.productPrice);
             mota =(TextView) itemView.findViewById(R.id.productDes);
 
-            mainLayout = imgview.findViewById(R.id.mainLayout);
+            try {
+                mainLayout = itemView.findViewById(R.id.mainLayout);
+            }catch (Exception e){
+                Log.d("abc", "ViewHolder: " +e.getMessage());
+            }
+
+
+
         }
     }
 

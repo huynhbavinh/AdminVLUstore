@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
@@ -11,23 +11,27 @@
     >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="302dp"
-        app:cardBackgroundColor="#FFFFFF">
+        android:layout_width="422dp"
+        android:layout_height="337dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="298dp">
+            android:layout_width="417dp"
+            android:layout_height="401dp">
 
             <LinearLayout
-                android:layout_width="376dp"
-                android:layout_height="298dp"
+                android:layout_width="397dp"
+                android:layout_height="402dp"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
+                    android:layout_gravity="center"
                     android:id="@+id/img_product"
                     android:layout_width="167dp"
                     android:layout_height="160dp"
@@ -35,8 +39,9 @@
 
                 <TextView
                     android:id="@+id/productName"
-                    android:layout_width="376dp"
+                    android:layout_width="382dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
                     android:text="ten"
                     android:textColor="#000000"
@@ -44,8 +49,9 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:layout_gravity="center"
                     android:id="@+id/productPrice"
-                    android:layout_width="match_parent"
+                    android:layout_width="382dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="gia tien"
@@ -54,9 +60,10 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:layout_gravity="center"
                     android:id="@+id/productDes"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="397dp"
+                    android:layout_height="60dp"
                     android:layout_margin="5dp"
                     android:text="mo ta"
                     android:textColor="#000000"
@@ -75,4 +82,4 @@
 
     -
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

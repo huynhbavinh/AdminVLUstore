@@ -13,10 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminDetailProduct"
+        <activity
+            android:name=".AdminDetailProduct"
             android:parentActivityName=".MainActivity"
             android:label="Details"
-            ></activity>
+            >
+        </activity>
         <activity android:name=".AdminAddnewProduct" />
         <activity android:name=".AdminCategoryActivity"></activity>
         <activity android:name=".MainActivity">
