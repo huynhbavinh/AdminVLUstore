@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "845731227495",
+    "firebase_url": "https://vlustore-722ac-default-rtdb.firebaseio.com",
+    "project_id": "vlustore-722ac",
+    "storage_bucket": "vlustore-722ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845731227495:android:8f096e920e66a8165c71c2",
+        "android_client_info": {
+          "package_name": "com.example.vluadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845731227495-073gchgif0aaveqsnin68mtctd28hsvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDq_j_D99wRUca7p_EFqrLi4dvjrj6gwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845731227495-073gchgif0aaveqsnin68mtctd28hsvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845731227495:android:4db83ee644e771495c71c2",
+        "android_client_info": {
+          "package_name": "com.example.vlustore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845731227495-073gchgif0aaveqsnin68mtctd28hsvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDq_j_D99wRUca7p_EFqrLi4dvjrj6gwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845731227495-073gchgif0aaveqsnin68mtctd28hsvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
