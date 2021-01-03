@@ -45,8 +45,9 @@ public class AdminBillManage extends AppCompatActivity {
                 for (DataSnapshot item : snapshot.getChildren()) {
 
                     String _user = item.getKey();
-                    Log.d("bill:", "onDataChange: " + _user);
-                    billitems.add(new Billitems(_user, "date"));
+                    String date = item.child("time").getValue().toString();
+                    billitems.add(new Billitems(_user,date));
+                    Log.d("bill:", "onDataChange: " + date);
                 }
                 setBillRecycleView();
             }

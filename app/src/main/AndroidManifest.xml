@@ -20,13 +20,15 @@
             android:label="Details"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".AdminAddnewProduct" />
-        <activity android:name=".AdminCategoryActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".AdminCategoryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" >
+
         </activity>
     </application>
 

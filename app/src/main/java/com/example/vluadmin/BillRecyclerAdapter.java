@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class BillRecyclerAdapter extends RecyclerView.Adapter<BillRecyclerAdapter.BillViewHolder> {
     private ArrayList<Billitems> _billList;
+
     public static class BillViewHolder extends RecyclerView.ViewHolder {
         TextView txt_user, txt_date;
 
@@ -38,7 +39,7 @@ public class BillRecyclerAdapter extends RecyclerView.Adapter<BillRecyclerAdapte
         Billitems currentItem = _billList.get(position);
 
         holder.txt_user.setText(currentItem.get_cvUser());
-        holder.txt_date.setText(currentItem.get_cvDate());
+        holder.txt_date.setText("Date: " + currentItem.get_cvDate());
     }
 
     @Override
