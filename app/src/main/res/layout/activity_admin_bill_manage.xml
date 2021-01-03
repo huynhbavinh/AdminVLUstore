@@ -2,18 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminBillManage">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recy_list"
+        android:id="@+id/bill_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="4dp"
-        android:scrollbars="vertical"
         android:background="@android:color/darker_gray"
-         />
+        android:padding="4dp"
+        android:scrollbars="vertical" />
 
 </LinearLayout>

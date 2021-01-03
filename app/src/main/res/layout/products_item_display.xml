@@ -60,10 +60,10 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_gravity="center"
                     android:id="@+id/productDes"
-                    android:layout_width="397dp"
+                    android:layout_width="379dp"
                     android:layout_height="60dp"
+                    android:layout_gravity="center"
                     android:layout_margin="5dp"
                     android:text="mo ta"
                     android:textColor="#000000"
