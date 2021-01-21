@@ -1,59 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#FFFFFF"
     android:orientation="horizontal"
-    android:padding="16dp"
-    android:id="@+id/mainLayout"
-    >
+    android:padding="10sp">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="422dp"
-        android:layout_height="337dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFFFF">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="417dp"
-            android:layout_height="401dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_product"
+                android:layout_width="167dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher" />
 
             <LinearLayout
-                android:layout_width="397dp"
-                android:layout_height="402dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:layout_gravity="center"
-                    android:id="@+id/img_product"
-                    android:layout_width="167dp"
-                    android:layout_height="160dp"
-                    android:src="@mipmap/ic_launcher" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_toRightOf="@id/img_product"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/productName"
-                    android:layout_width="382dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="5dp"
                     android:text="ten"
                     android:textColor="#000000"
                     android:textSize="40dp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_gravity="center"
                     android:id="@+id/productPrice"
-                    android:layout_width="382dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
                     android:text="gia tien"
                     android:textColor="#000000"
                     android:textSize="20sp"
@@ -61,25 +52,14 @@
 
                 <TextView
                     android:id="@+id/productDes"
-                    android:layout_width="379dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
                     android:text="mo ta"
                     android:textColor="#000000"
                     android:textSize="20sp"
                     android:textStyle="bold" />
-
-                <!--so our layout is set-->
-
-
             </LinearLayout>
+        </RelativeLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-    -
-
-    -
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

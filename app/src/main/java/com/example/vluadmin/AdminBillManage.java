@@ -43,11 +43,14 @@ public class AdminBillManage extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 billitems.clear();
                 for (DataSnapshot item : snapshot.getChildren()) {
-
+                    String date;
                     String _user = item.getKey();
-                    String date = item.child("time").getValue().toString();
-                    billitems.add(new Billitems(_user,date));
-                    Log.d("bill:", "onDataChange: " + date);
+                    for (DataSnapshot sp : item.getChildren()){
+                        String spkey = sp.getKey();
+                        date = item.child(spkey).child("time").getValue().toString();
+                        billitems.add(new Billitems(_user,date));
+                    }
+
                 }
                 setBillRecycleView();
             }
